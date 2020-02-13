@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap');
+
+/*body {*/
+/*	background-image: url('static/background.jpg');*/
+/*}*/
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	font-size: 5rem;
+	text-transform: uppercase;
+	color: #FEBCC8;
+}
+
+h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2.2rem;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	color: #FEBCC8;
+	text-decoration: underline;
+}
+
+.vertical-center {
+	min-height: 100%;  /* Fallback for browsers that do NOT support vh unit */
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.align-items-center {
+	padding: 50px;
+	background-color: #ffffff;
+	box-shadow: 10px 10px 5px grey;
+}
+
+.rainbow_text_animated:hover, .rainbow_text_animated:active {
+	background: linear-gradient(to right, #febcc8, #eaebff, #d3eeff, #eaebff, #febcc8);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: rainbow_animation 10s ease-in-out infinite;
+	background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+	0%, 100% {
+		background-position: 0 0;
+	}
+
+	50% {
+		background-position: 100% 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#profile-picture {
+		border-radius: 50%;
+	}
+}
