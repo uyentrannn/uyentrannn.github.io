@@ -1,2 +1,0 @@
-# uyentran.website
-Personal Website
