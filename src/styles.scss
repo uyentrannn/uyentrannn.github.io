@@ -1,0 +1,52 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$personal-website-primary: mat.define-palette(mat.$orange-palette, 50);
+$personal-website-accent: mat.define-palette(mat.$brown-palette, 700);
+
+// The warn palette is optional (defaults to red).
+$personal-website-warn: mat.define-palette(mat.$red-palette, 200);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$personal-website-theme: mat.define-light-theme((
+  color: (
+    primary: $personal-website-primary,
+    accent: $personal-website-accent,
+    warn: $personal-website-warn,
+  )
+));
+
+@include mat.all-component-themes($personal-website-theme);
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --dark-brown: #38251b;
+  --brown: #462a1e;
+  --dark-tan: #8a6552;
+  --tan: #a88378;
+  --nude: #B77B82;
+  --light-nude: #d9bcb8;
+  --light-cream: #FFFDF0;
+  --cream: #b59b80;
+  -webkit-text-fill-color: #38251b;
+}
+
+body {
+  background-color: var(--light-cream);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

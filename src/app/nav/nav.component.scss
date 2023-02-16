@@ -1,0 +1,29 @@
+
+.styledLinks {
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  margin: 0 20px;
+  position: relative;
+  float: left;
+  font-weight: bold;
+  list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+  color: var(--dark-brown);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--nude);
+}
+
+.resumeLink {
+  margin: 0 20px;
+  font-weight: bold;
+}
